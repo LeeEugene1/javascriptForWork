@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="datetime-local" id="visit_time" disabled> -->
+    <input type="datetime" id="visit_time" disabled>
+
+    <!-- <p id="visit_time"></p> -->
+    <script>
+        // datetime-local일때 ->한국시간이랑 안맞아서 포기
+        // document.getElementById('visit_time').value= new Date().toISOString().slice(0, 16);
+
+        // datetime일때
+        // document.getElementById('visit_time').value = new Date().toLocaleDateString();
+        // document.getElementById('visit_time').value = new Date().toLocaleTimeString();
+        // document.getElementById('visit_time').value = new Date().toLocaleString().slice(0,20);
+        //slice를 하면 시분까지만 나올수있게처리됨
+        document.getElementById('visit_time').value = new Date().toLocaleString().slice(0,20);
+    </script>
+</body>
+</html>
